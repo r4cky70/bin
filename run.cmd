@@ -2,9 +2,9 @@
 
 echo Compilling %1.cpp...
 IF [%2] == [] (
-  g++ %1.cpp -std=c++14 -o sla
+  g++ %1.cpp -std=c++14 -Wall -Wextra -Wfatal-errors -Wl,--stack=268435456 -o sla
 ) ELSE (   
-  g++ %1.cpp -std=c++14 -g -DLOCAL -o sla
+  g++ %1.cpp -std=c++14 -Wall -Wextra -Wfatal-errors -Wl,--stack=268435456 -DLOCAL -o sla
 )
 echo Compilled.
 
