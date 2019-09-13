@@ -1,0 +1,16 @@
+
+echo Compiling $1.cpp...
+
+
+if [ -z "$2" ]; then
+  g++ $1.cpp -std=c++17 -o sla
+else
+  g++ $1.cpp -std=c++17 -DLOCAL -o sla
+fi
+echo Compilation\'s complete.
+# echo Compilation\'s over.
+if [ $2 == 1 ]; then
+  ./sla > out.txt
+else
+  ./sla
+fi
