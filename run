@@ -5,7 +5,7 @@ echo Compiling $1.cpp...
 if [ -z "$2" ]; then
   g++ $1.cpp -std=c++17 -Wall -Wextra -Wfatal-errors -Wl,--stack=268435456 -Wno-sign-compare -o sla
 else
-  g++ $1.cpp -std=c++17 -Wall -Wextra -Wfatal-errors -Wl,--stack=268435456 -Wno-sign-compare-DLOCAL -o sla
+  g++ $1.cpp -std=c++17 -Wall -Wextra -Wfatal-errors -Wl,--stack=268435456 -Wno-sign-compare -DLOCAL -o sla
 fi
 echo Compilation\'s complete.
 # echo Compilation\'s over.
